@@ -1,0 +1,130 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("todo2.jpg");
+    background-size: cover;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .input-container button {
+    width: 30%;
+    height: 57px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    margin-left: 2px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .input-container button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .task-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .pending-list, .completed-list {
+    width: calc(50% - 20px);
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pending-list h2, .completed-list h2 {
+    margin-top: 0;
+  }
+  
+  .pending-list ul, .completed-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pending-list li, .completed-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .pending-list li:last-child, .completed-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .pending-list li.done, .completed-list li.done {
+    text-decoration: line-through;
+  }
+  
+  /* Responsive styles */
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 300px;
+    }
+    .input-container input {
+      width: 60%;
+    }
+    .input-container button {
+      width: 40%;
+    }
+    .task-lists {
+      flex-direction: column;
+    }
+    .pending-list, .completed-list {
+    
+      width: 90%;
+      margin: 20px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 250px;
+    }
+    .input-container input {
+      width: 50%;
+    }
+    .input-container button {
+      width: 50%;
+    }
+    .task-lists {
+      flex-direction: column;
+    }
+    .pending-list, .completed-list {
+     
+      width: 90%;
+      margin: 20px 0;
+    }
+  }
